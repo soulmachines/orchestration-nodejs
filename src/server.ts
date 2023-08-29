@@ -1,7 +1,8 @@
 import express from 'express';
-import { Server as WebSocketServer } from 'ws'; // Using 'Server' from 'ws' package.
+import * as WebSocket from 'ws';
 import { createServer } from 'http';
 import dotenv from 'dotenv';
+import { handleMessage } from './controller';
 
 // Load environment variables from .env file
 dotenv.config();
@@ -12,16 +13,14 @@ const app = express();
 const server = createServer(app);
 
 // WebSocket Server
-const wss = new WebSocketServer({ server });
+const wss = new WebSocket.Server({ server });
 
-wss.on('connection', (ws) => {
+wss.on('connection', (ws: WebSocket) => {
     console.log('A new client Connected');
     
     ws.on('message', (message) => {
-        console.log('Received: %s', message);
+        handleMessage(ws, message);
     });
-
-    ws.send('Welcome! You are connected...');
 });
 
 // Express Server
