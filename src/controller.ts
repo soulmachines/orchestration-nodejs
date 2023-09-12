@@ -28,7 +28,7 @@ export function handleRequest(ws: WebSocket, req: ConversationRequest) {
         resp.output.text = 'Hi there!';
     }
 
-    // Set fallback response (can be handled by skills in the project)
+    // Set fallback response example (can be handled by skills in the project)
     if (req.input.text.toLowerCase().startsWith('why')) {
         resp.output.text = 'I do not know how to answer that';
         resp.fallback = true;
