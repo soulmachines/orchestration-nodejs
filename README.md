@@ -3,16 +3,24 @@
 This is an example orchestration server implementation using Node JS.
 It is set up to be used as a conversation server.
 
-## Run it
+## Install
+Run to install the project's dependencies.
+```sh
+npm install
+```
 
+## Run
 Run the dev npm script for development, it will automatically re-start and update as you make any code changes:
 
 ```sh
-npm install
 npm run dev
 ```
 
 You can change the server port by editing the `.env` file.
+
+## License
+
+Soul Machines React Reference UI is available under the Apache License, Version 2.0. See the [LICENSE.txt](./LICENSE.txt) file for more info.
 
 ## Modify it
 
