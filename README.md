@@ -20,7 +20,7 @@ You can change the server port by editing the `.env` file.
 
 ## License
 
-Soul Machines React Reference UI is available under the Apache License, Version 2.0. See the [LICENSE.txt](./LICENSE.txt) file for more info.
+Soul Machines Orchestration Nodejs is available under the Apache License, Version 2.0. See the [LICENSE.txt](./LICENSE.txt) file for more info.
 
 ## Modify it
 
